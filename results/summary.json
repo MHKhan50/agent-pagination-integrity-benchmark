@@ -1,0 +1,64 @@
+{
+  "benchmark": "Agent Pagination Integrity Benchmark",
+  "version": "0.1.0",
+  "n_episodes": 3000,
+  "seeds": [
+    17,
+    29,
+    43,
+    71,
+    101
+  ],
+  "policies": [
+    "first_page_only",
+    "stop_on_empty",
+    "follow_cursor",
+    "count_verified"
+  ],
+  "scenario_counts": {
+    "stable": 592,
+    "empty_nonterminal": 592,
+    "duplicate_omission": 580,
+    "missing_page": 641,
+    "cursor_cycle": 595
+  },
+  "metrics": [
+    {
+      "policy": "first_page_only",
+      "episodes": 3000,
+      "mean_coverage": 0.21913672703607334,
+      "false_completion_rate": 1.0,
+      "incomplete_detection_rate": 0.0,
+      "correct_completion_rate": 0.0,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "policy": "stop_on_empty",
+      "episodes": 3000,
+      "mean_coverage": 0.8565864502530174,
+      "false_completion_rate": 0.6033333333333334,
+      "incomplete_detection_rate": 0.0,
+      "correct_completion_rate": 0.19833333333333333,
+      "mean_tool_calls": 5.153666666666667
+    },
+    {
+      "policy": "follow_cursor",
+      "episodes": 3000,
+      "mean_coverage": 0.9482392143891998,
+      "false_completion_rate": 0.406,
+      "incomplete_detection_rate": 0.0,
+      "correct_completion_rate": 0.39566666666666667,
+      "mean_tool_calls": 5.74
+    },
+    {
+      "policy": "count_verified",
+      "episodes": 3000,
+      "mean_coverage": 0.9482392143891998,
+      "false_completion_rate": 0.0,
+      "incomplete_detection_rate": 1.0,
+      "correct_completion_rate": 0.39566666666666667,
+      "mean_tool_calls": 5.74
+    }
+  ],
+  "interpretation": "Synthetic deterministic policy simulation; not a measurement of deployed LLM agents."
+}
