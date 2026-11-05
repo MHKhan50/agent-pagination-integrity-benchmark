@@ -10,4 +10,4 @@
 - Not suitable for: claiming real-world LLM agent performance or production API reliability
 - Personal data: none
 - Collection: no external API calls or user data
-- Licence: MIT for code and generated data
+- Licence: CC BY-SA 4.0 for the generated data; MIT for the code

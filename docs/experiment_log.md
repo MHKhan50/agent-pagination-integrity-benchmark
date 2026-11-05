@@ -21,3 +21,5 @@ Mean coverage: first_page_only 21.91%; stop_on_empty 85.66%; follow_cursor 94.82
 ## Interpretation
 
 Count reconciliation changes the completion claim, not the amount retrieved: `count_verified` and `follow_cursor` have identical mean coverage, but the former does not report completion when the unique count fails to match the expected total or a cursor cycle prevents normal exhaustion. This is a safety-oriented abstention from a false completeness claim, not a recovery mechanism.
+
+Note: `count_verified` cannot report a false completion in this simulator, because it checks the unique count against the expected total that the simulator provides. Its 0% is a property of the design, not an empirical finding.

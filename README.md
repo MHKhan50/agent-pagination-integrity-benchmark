@@ -41,14 +41,23 @@ The default experiment contains 3,000 episodes, 5 seeds, 5 scenario types, and 4
 - `results/`: precomputed results from the packaged reference run.
 - `tests/`: automated tests.
 - `notebooks/APIB_Kaggle_Colab.ipynb`: analysis notebook compatible with Kaggle and Colab when the project files are present.
-- `docs/experimental_protocol.md`: preregistered-style protocol and limitations.
+- `docs/experimental_protocol.md`: protocol and limitations.
+
+## Article
+
+[Following the cursor still let an agent claim a complete list in 41% of cases](https://masmatixinnovations.co.uk/insights/agent-pagination-integrity-benchmark.html)
 
 ## Limitations
 
 The simulator assumes the expected total is available to the agent, does not model real network latency or API-specific token expiry, and uses a finite set of hand-designed fault modes. A later study should test live API adapters and LLM-driven agents under controlled conditions. The current benchmark's results are policy-simulator baselines only.
 
+`count_verified` reaches 0% false completion by construction: it only reports completion when the unique count equals the expected total, which the simulator gives it. The useful findings are the size of the gap for the other policies and the fact that count checking changes the completion claim but not coverage (94.8% for both cursor-following policies). A harder version should hide or perturb the expected total.
+
+## Licence
+
+Code: MIT ([`LICENSE`](LICENSE)). Generated data: CC BY-SA 4.0, as on the Kaggle dataset.
+
 ## References
 
-1. Kehkashan et al. (2026), *From benchmarks to deployment: a comprehensive review of agentic AI evaluation*, Artificial Intelligence Review. https://doi.org/10.1007/s10462-026-11571-0
-2. Google Ad Manager API, *Pagination*: documents that a page may contain fewer results, including zero, while a `nextPageToken` still signals continuation. https://developers.google.com/ad-manager/api/beta/pagination
-3. Microsoft Graph, *Paging*: documents cursor handling and persistence of the last successful continuation token. https://learn.microsoft.com/en-us/graph/paging
+1. Google Ad Manager API, *Pagination*: documents that a page may contain fewer results, including zero, while a `nextPageToken` still signals continuation. https://developers.google.com/ad-manager/api/beta/pagination
+2. Microsoft Graph, *Paging*: documents cursor handling and persistence of the last successful continuation token. https://learn.microsoft.com/en-us/graph/paging
