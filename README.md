@@ -59,5 +59,6 @@ Code: MIT ([`LICENSE`](LICENSE)). Generated data: CC BY-SA 4.0, as on the Kaggle
 
 ## References
 
-1. Google Ad Manager API, *Pagination*: documents that a page may contain fewer results, including zero, while a `nextPageToken` still signals continuation. https://developers.google.com/ad-manager/api/beta/pagination
-2. Microsoft Graph, *Paging*: documents cursor handling and persistence of the last successful continuation token. https://learn.microsoft.com/en-us/graph/paging
+1. Kehkashan et al. (2026), *From benchmarks to deployment: a comprehensive review of agentic AI evaluation*, Artificial Intelligence Review. https://doi.org/10.1007/s10462-026-11571-0
+2. Google Ad Manager API, *Pagination*: documents that a page may contain fewer results, including zero, while a `nextPageToken` still signals continuation. https://developers.google.com/ad-manager/api/beta/pagination
+3. Microsoft Graph, *Paging*: documents cursor handling and persistence of the last successful continuation token. https://learn.microsoft.com/en-us/graph/paging
