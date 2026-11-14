@@ -1,5 +1,7 @@
 # Agent Pagination Integrity Benchmark (APIB) v0.1.0
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24228067.svg)](https://doi.org/10.5281/zenodo.24228067)
+
 **Research question:** When a tool-using agent retrieves a collection through cursor-based pagination, how often do common stopping and verification policies falsely declare the collection complete under empty-but-nonterminal pages, duplicate/omitted records, missing pages, and cursor cycles?
 
 ## Scope and scientific claim
